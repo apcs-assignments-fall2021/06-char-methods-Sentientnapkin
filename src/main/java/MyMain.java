@@ -5,7 +5,7 @@ public class MyMain {
     // it is returned unchanged. 
     public static char toLower(char ch) {
         if (ch>='A'&&ch<='Z')
-            return (char)(ch+35);
+            return (char)(ch+32);
         else return ch;
     }
 
@@ -14,7 +14,7 @@ public class MyMain {
     // it is returned unchanged.
     public static char toUpper(char ch) {
         if (ch>='a'&&ch<='z')
-            return (char)(ch-35);
+            return (char)(ch-32);
         else return ch;
     }
 
@@ -24,7 +24,7 @@ public class MyMain {
     public static String removeNumbers(String str) {
         String nonums = "";
         for(int i = 0;i<str.length();i++){
-            if (str.charAt(i)<='0'||str.charAt(i)>='9')
+            if (str.charAt(i)<'0'||str.charAt(i)>'9')
                 nonums+=str.charAt(i);
         }
         return nonums;
